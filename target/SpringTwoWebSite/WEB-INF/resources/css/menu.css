@@ -1,0 +1,219 @@
+/*.ul_menu {
+    list-style-type: none;
+    height: 46px;
+    margin: 0;
+    padding:0;
+    !*overflow: hidden;*!
+    background-color: #333;
+}
+
+.ul_menu li {
+    float: left;
+    !*width: 10%;*!
+    box-sizing: border-box;
+}
+
+.ul_menu li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.ul_menu li a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+.ul_menu li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.ul_menu li .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}*/
+
+#search{
+    /*width: 45%;*/
+
+    float: right;
+    margin: 15px 20px;
+}
+
+/*
+input[name=search] {
+    width: 200px;
+    float: right;
+    transition: width 0.6s ;
+}
+*/
+
+
+/*.right{
+    float: right;
+}*/
+
+#menuDiv{
+    text-align: left;
+    background: #fff;
+    min-height : 46px;
+    min-width: 730px;
+    max-height: 46px;
+    width: 70%;
+    margin: 0 auto;
+    padding: 0;
+    box-shadow: 0 20px 20px rgba(0,0,0,.4);
+}
+
+.container{
+    text-align: left;
+    background: #fff;
+    width: 70%;
+    height: 100%;
+    min-height : 450px;
+    min-width: 730px;
+    margin :0 auto;
+    padding: 0;
+    box-shadow: 0 20px 40px rgba(0,0,0,.4);
+}
+
+.dropdown-menu{
+    width: auto;
+    min-width: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-custom {
+    /*background-color: #ff5500;*/
+    background-color: black;
+}
+/* change the brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: rgba(255,255,255,.8);
+}
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+    color: rgb(255,255,255);
+}
+/* change the color of active or hovered links */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: #ffffff;
+}
+
+#menuDiv li a:hover{
+    color: #f10000;
+}
+#menu_search_form{
+    width: inherit;
+}
+
+#div_autocomplete{
+    width: inherit;
+    z-index: 1;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2); ;
+}
+
+#data:hover{
+    background-color: #f9f9f9;
+}
+
+#searchData{
+    width: 100%;
+}
+
+a:hover{
+    text-decoration: none;
+    color: #f10000;
+}
+
+.error{
+    color: #f10000;
+}
+/*#menu_search{
+    margin-top: 12px;
+}
+
+#menu_search_form{
+    margin-bottom: 0;
+}
+
+.ul_menu .right_li{
+    float: right;
+}
+
+#menuInput{
+    width: 100%;
+}
+
+
+
+#searchData{
+    width: 100%;
+    background-color: #f1f1f1
+
+}
+
+.ul_menu .searchLink{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 5px;
+    text-align: left;
+    color: black;
+}
+
+#movie_part{
+    width:90px;
+}
+
+#people_part{
+    width:72px;
+}
+
+#group_part{
+    width:84px;
+}
+
+#quit_part{
+    width:78px;
+}
+
+#personal_part{
+    width:128px;
+}
+
+#search_part{
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left:39px;
+    margin-right:39px;
+}
+
+.menu-div{
+
+}*/
+

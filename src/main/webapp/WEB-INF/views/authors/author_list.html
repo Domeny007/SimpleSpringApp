@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="head :: frag(
+                    title='searchActors',
+                    links = ${new String[]{'css/menu.css','css/group_list.css'}},
+                    scripts=${new String[]{'js/common/common_people_functions.js',
+                    'js/search/menu_search.js','js/common/change_lang.js',
+                    'js/search/search_actors.js'}})">
+</head>
+
+<body>
+
+<div th:replace="main/menu_main :: menu"></div>
+
+<div id = "allForms">
+
+    <input type="hidden" id = "numPage" th:value="${numPage}"/>
+
+    <div id = "back" >
+        <div class="arrow_div">
+            <img class="arrow" th:src="@{images/list_page/back.png}"/>
+        </div>
+    </div>
+
+    <div id="searchDiv">
+        <form id="searchForm">
+            <input type="hidden" id = "searchType" name="searchType" value="user"/>
+            <input type="text" id="searchInput" placeholder="Search actor...">
+        </form>
+    </div>
+
+    <div id = "dataDiv">
+
+        <th:block th:if="${size == 0}">
+            <input id = "isLast" type="hidden" value="last"/>
+        </th:block>
+
+        <h2 class = "h2_title">Самые популярные актеры</h2>
+
+        <ul class="list">
+            <th:block th:each="author:${authors}">
+                <li class="li_item">
+                    <div class="list_item">
+
+                        <div class = "div_photo">
+                            <a th:href="${(#mvc.url('AC#showAuthor')).arg(0,author.id).build()}">
+                                <img class="image" th:src="@{${author.photo}}" th:alt = "${author.name}"/>
+                            </a>
+                        </div>
+
+                        <div class="div_content">
+                            <div class = "content">
+                                <p>Имя актера :
+                                    <a th:href="${(#mvc.url('AC#showAuthor')).arg(0,author.id).build()}">
+                                        <span class="span_name" th:text="${author.name} + ' ' +  ${author.surname}"></span>
+                                    </a></p>
+                                <p th:text="'Страна   : ' +  ${author.motherland.name}"></p>
+                                <p th:text="'День рождения : ' +  ${#dates.format(author.birthday, 'dd.MM.yyyy')}"></p>
+                                <p th:text="'Оценка актера : ' + ${author.mark}"></p>
+                            </div>
+                        </div>
+                        <div class="clear_wrapper">
+                            <div class="clear"></div>
+                        </div>
+
+                    </div>
+                </li>
+            </th:block>
+        </ul>
+    </div>
+
+    <div id = "forward" >
+        <div class="arrow_div">
+            <img class="arrow" th:src="@{images/list_page/forward.png}"/>
+        </div>
+    </div>
+
+    <th:block th:replace="bottom :: bottom"></th:block>
+
+</div>
+
+</body>
+
+</html>

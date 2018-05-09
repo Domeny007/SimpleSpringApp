@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+    <body th:fragment="dop_data(countries)" th:accept-charset="utf-8">
+
+        <p>Выберите страну :  <select th:field="*{country}">
+            <option th:each="countryOne : ${countries}"
+                    th:value="${countryOne.id}"
+                    th:text="${countryOne.name}"></option>
+        </select></p>
+        <div th:if="${#fields.hasErrors('country')}">
+            <p th:each="err : ${#fields.errors('country')}"
+               th:text="${err}" th:class="error">Email error
+            </p>
+        </div>
+
+        <p>Выберите пол : <select th:field="*{gender}">
+            <option th:each="gender : ${genders}"
+                    th:value="${gender}"
+                    th:text="${gender.value}"></option>
+        </select></p>
+        <div th:if="${#fields.hasErrors('gender')}">
+            <p th:each="err : ${#fields.errors('gender')}"
+               th:text="${err}" th:class="error">Email error
+            </p>
+        </div>
+
+    </body>
+</html>

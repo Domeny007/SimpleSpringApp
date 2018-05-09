@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="head :: frag(
+                    title='Change Personal',
+                    links = 'css/registration.css',
+                    scripts = ~{})">
+</head>
+
+<body>
+
+<!--<c:set var="user" scope="session" value="${sessionScope.current_user}"/>
+<c:set var="countries" scope="session" value="${sessionScope.countries}"/>-->
+
+<div id = "registration_div">
+
+    <div id = "registration_form">
+
+        <form th:action = "${(#mvc.url('UC#changePersonalPost')).build()}" method="post" id = "form" th:object="${userChangeForm}">
+            <p><input type="text" name="usernameReal" placeholder="Username"
+                      class="text" th:value="${userChangeForm.usernameReal}"  autocomplete="off"/></p>
+            <div th:if="${#fields.hasErrors('usernameReal')}">
+                <p th:each="err : ${#fields.errors('usernameReal')}"
+                   th:text="${err}" th:class="error">Username error
+                </p>
+            </div>
+
+            <div th:replace="user_dop_data :: dop_data(countries = ${countries})"></div>
+
+            <input type="submit" value="Сохранить" class="button">
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

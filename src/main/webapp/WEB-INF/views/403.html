@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="head :: frag(title='Access denied',
+                            links = 'css/start_page.css',
+                            scripts=${new String[]{'/js/jquery-3.2.1.js','js/common/form_reset.js','js/common/change_lang.js'}})">
+</head>
+
+<body>
+<div id = "allForms">
+
+    <div id = "authentication">
+        <h3 th:text="#{label.access_denied}">FORBIDDEN</h3>
+        <h2><a th:href="${(#mvc.url('SC#profileGet')).build()}">Back to Personal Page</a></h2>
+    </div>
+
+</div>
+
+</body>
+
+</html>
+

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<th:block th:fragment="menu">
+    <div class="container" id="menuDiv">
+    <nav class="navbar navbar-expand navbar-custom" >
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" th:href="${(#mvc.url('BC#showBooks')).build()}" th:text="#{menu.books}">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="${(#mvc.url('AC#showAuthors')).build()}" th:text="#{menu.authors}">Link</a>
+                </li>
+            </ul>
+                <ul class="navbar-nav mt-2 mt-lg-0">
+                <li class="nav-item">
+            <div id = "menu_search">
+            <form class="my-auto my-lg-0 mx-auto" id="menu_search_form">
+                <input class="form-control mr-sm-2" type="search" id="menuInput" placeholder="Search book..." autocomplete="off" aria-label="Search">
+                <input type="hidden" id = "menuType" name="searchType" value="menu"/>
+            </form>
+            </div>
+            <div id = "div_autocomplete">
+            </div>
+                <li class="nav-item">
+            </ul>
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" th:text="#{lang.ru}">
+                        Dropdown link
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" th:href="'?lang=' + #{lang.ru}" th:text="#{lang.ru}"></a>
+                        <a class="dropdown-item" th:href="'?lang=' + #{lang.en}" th:text="#{lang.en}"></a>
+                    </div>
+                </li>
+
+                <li id = "personal_part" class="nav-item">
+                    <a class="nav-link" th:href="${(#mvc.url('SC#profileGet')).build()}" th:text="#{menu.personal}"></a>
+                </li>
+
+                <li id = "quit_part" class="nav-item">
+                    <a class="nav-link" th:href="@{/logout}" th:text="#{menu.quit}"></a>
+                </li>
+            </ul>
+    </nav>
+        </div>
+</th:block>
+</html>

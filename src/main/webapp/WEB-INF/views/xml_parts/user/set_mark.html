@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<div id="data">
+
+
+    <input type = "hidden" id = "flag" th:value = "${flag}"/>
+    <input type = "hidden" id = "commonMark" th:value = "${commonMark}"/>
+
+    <th:block th:switch="${flag == true}">
+        <th:block th:case="true">
+
+            <span th:id = "mark_span" th:text="'Ваша оценка : ' + ${userMark}"></span>
+
+        </th:block>
+
+        <th:block th:case="false">
+
+            <span th:id = "mark_span" th:text="'Ошибка при добавление оценки : ' + ${mark_not_set_error}"></span>
+
+        </th:block>
+
+    </th:block>
+</div>

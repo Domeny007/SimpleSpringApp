@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+    <head th:replace="head :: frag(
+                        title=${book.name},
+                        links = ${new String[]{'/css/menu.css','/css/movie_content.css'}},
+                        scripts=${new String[]{'/js/common/contentMarkPages.js',
+                        '/js/search/menu_search.js','/js/common/change_lang.js'}})">
+    </head>
+
+    <body>
+
+        <div th:replace="main/menu_main :: menu"></div>
+
+        <div id = "allForms">
+
+            <div id = mainColor>
+
+                <div id = "general_inf">
+
+                    <div id = "div_photo">
+                    <img class="img-fluid" th:src="@{${book.photo}}" th:alt="${book.name}">
+                    </div>
+
+                    <div id = "div_short_inf">
+
+                        <p><span th:text="'Название фильма :' + ${book.name}"></span></p>
+
+                        <div class="clear_wrapper">
+                            <div class="clear"></div>
+                        </div>
+
+                        <p><span>Писатели :
+
+                            <th:block th:each="author,iter:${book.authors}">
+
+                               <th:block th:if="${iter.last}">
+                                   <span th:text="${author.name} + ' ' + ${author.surname}"></span>
+                               </th:block>
+
+                                <th:block th:unless="${iter.last}">
+                                    <span th:text="${author.name} + ' ' + ${author.surname} + ','"></span>
+                                </th:block>
+
+                            </th:block>
+
+                        </span></p>
+
+                        <div class="clear_wrapper">
+                            <div class="clear"></div>
+                        </div>
+
+                        <p><span>Страна :
+                            <th:block th:each="country,iter:${book.countries}">
+                               <th:block th:if="${iter.last}">
+                                   <span th:text="${country.name}"></span>
+                               </th:block>
+                                <th:block th:unless="${iter.last}">
+                                    <span th:text="${country.name} + ','"></span>
+                                </th:block>
+                            </th:block>
+                        </span></p>
+
+                        <div class="clear_wrapper">
+                            <div class="clear"></div>
+                        </div>
+
+                        <p><span>Страна :
+                            <th:block th:each="genre,iter:${book.genres}">
+                               <th:block th:if="${iter.last}">
+                                   <span th:text="${genre.name}"></span>
+                               </th:block>
+                                <th:block th:unless="${iter.last}">
+                                    <span th:text="${genre.name} + ','"></span>
+                                </th:block>
+                            </th:block>
+                        </span></p>
+
+                        <div class="clear_wrapper">
+                            <div class="clear"></div>
+                        </div>
+
+                        <p><span th:text="'Год выхода :' + ${book.year}"></span></p>
+
+                        <div class="clear_wrapper">
+                            <div class="clear"></div>
+                        </div>
+
+                        <p><span id = "mark" th:text="'Оценка фильма :' + ${book.mark}"></span></p>
+
+                        <div class="clear_wrapper">
+                            <div class="clear"></div>
+                        </div>
+
+                     </div>
+
+                </div>
+
+                <div class="clear_wrapper">
+                <div class="clear"></div>
+                </div>
+
+                <div id = "div_main">
+
+                    <div id = "div_description">
+                        <p id = "title_description">Описание :</p>
+                        <p id = "description"><span th:text="${book.description}"></span></p>
+                    </div>
+
+                    <div class = "div_mark">
+
+                        <div th:switch="${book.userMark == null}">
+
+                            <th:block th:case="false">
+                                <span  class = "mark_span" th:text="'Ваша оценка :' + ${book.userMark}"></span>
+                            </th:block>
+
+                            <th:block th:case="true">
+                                <span  class = "mark_span">Оцените фильм :</span>
+
+                                <div id = "div_mark_wr" class = "div_mark_wrapper">
+
+                                    <div class = "select_wrap">
+                                        <div class="select">
+                                            <select required name="movieMark" id="movieSelect">
+                                                <th:block th:each="i: ${#numbers.sequence(0, 10)}">
+                                                    <option th:name="userMark" th:value="${i}" th:text="${i}"></option>
+                                                </th:block>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class = "btn_wrap">
+                                        <input type="hidden" id="typeMark" value="book">
+                                        <input type="hidden" id="userId" name="userId" th:value="${user.id}">
+                                        <input type="hidden" id="movieId" name="movieId" th:value="${book.id}">
+                                        <input class = "mark_btn button" id="setMarkBtn" type="button" th:value="Оценить"/>
+                                    </div>
+
+                                </div>
+                            </th:block>
+                        </div>
+                    </div>
+
+                    <div class="clear_wrapper">
+                    <div class="clear"></div>
+                    </div>
+
+                    <div id = "reviews">
+
+                        <div class = "review">
+                            <p class="review_title" th:text="Комментарии"></p>
+                        </div>
+
+                        <div class="clear_wrapper">
+                            <div class="clear"></div>
+                        </div>
+
+                        <th:block th:each="review,iterStat:${book.reviews}">
+
+                            <div class = "review">
+                                <p class="review_title" th:text="${review.writer.usernameReal}"></p>
+                                <p class="review_title" th:text="${review.title}"></p>
+                                <p class="review_content" th:text="${review.content}"></p>
+                            </div>
+
+                            <th:block th:if="${not iterStat.last}">
+                                <div class="clear_wrapper">
+                                    <div class="clear"></div>
+                                </div>
+                            </th:block>
+
+                        </th:block>
+
+                    </div>
+
+                    <div class="clear_wrapper">
+                    <div class="clear"></div>
+                    </div>
+
+                    <div id = "my_review">
+
+                        <form>
+                            <div class="form-group">
+                                <div class="form-control" style="padding: 0">
+                                    <p class="form-control-static" th:text="'Отправитель : ' + ${user.usernameReal}">someone@example.com</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="my_title" th:text="'Название рецензии'">Example select</label>
+                                <input type="email" class="form-control" name="title" id = "my_title" placeholder="Моя рецензия">
+                            </div>
+                            <div class="form-group">
+                                <label for="my_content" th:text="'Текст рецензии'">Example textarea</label>
+                                <textarea class="form-control" id = "my_content" name="content" rows="3"></textarea>
+                            </div>
+                            <div>
+                                <input type="hidden" id="review_type" name="review_type" value="book">
+                                <input type="hidden" id="obj_id" name="obj_id" th:value="${book.id}">
+                                <input type="hidden" id="authorId" name="authorId" th:value="${user.id}">
+                                <input type="button" id="setReviewBtn" th:value="Добавить" class="button">
+                            </div>
+
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <th:block th:replace="bottom :: bottom"></th:block>
+
+    </body>
+
+</html>

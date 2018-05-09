@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<div id="data">
+
+        <th:block th:if="${size == 0}">
+            <input th:id = "isLast" type="hidden" value="last"/>
+            <h2 class = "h2_title">Ничего не найдено</h2>
+        </th:block>
+
+        <th:block th:unless="${size == 0}">
+            <input th:id = "isLast" type="hidden" value="not_last"/>
+            <h2 class = "h2_title" th:text="${title}"></h2>
+
+            <ul class="list">
+                <th:block th:each="author:${authors}">
+                    <li class="li_item">
+                        <div class="list_item">
+
+                            <div class = "div_photo">
+                                <a th:href="@{'/author/' + ${author.id}}">
+                                    <img class = "image" th:src="@{${author.photo}}"
+                                         th:alt = "${author.name}"/>
+                                </a>
+                            </div>
+
+                            <div class="div_content">
+                                <div class = "content">
+                                    <p>Имя актера :
+                                        <a th:href="@{'/author/' + ${author.id}}">
+                                            <span class="span_name" th:text="${author.name} + ' ' +  ${author.surname}"></span>
+                                        </a></p>
+                                    <p th:text="'Страна : ' + ${author.motherland.name}"></p>
+                                    <p th:text="'День рождения : ' + ${#dates.format(author.birthday, 'dd.MM.yyyy')}"></p>
+                                    <p th:text="'Оценка : ' + ${author.mark}"></p>
+                                </div>
+                            </div>
+                            <div class="clear_wrapper">
+                                <div class="clear"></div>
+                            </div>
+
+                        </div>
+                    </li>
+                </th:block>
+            </ul>
+        </th:block>
+</div>

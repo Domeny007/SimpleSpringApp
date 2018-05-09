@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+
+<head th:replace="head :: frag(
+                    title='add_actor',
+                    links = 'css/add_people.css',
+                    scripts=~{})">
+
+</head>
+
+
+<body>
+
+<th:block sec:authorize="hasRole('ADMIN')">
+
+<div id = "registration_div">
+
+    <div id = "registration_form">
+
+
+
+        <form th:action = "${(#mvc.url('AC#addAuthorPost')).build()}" method="post" id = "form"
+              enctype="multipart/form-data"  th:object="${author}">
+
+            <p><input type="text" placeholder="Имя" class="text" th:field="*{name}" /> </p>
+            <div th:if="${#fields.hasErrors('name')}">
+                <p th:each="err : ${#fields.errors('name')}"
+                   th:text="${err}" th:class="error">Username error
+                </p>
+            </div>
+            <p><input type="text" placeholder="Фамилия" class="text" th:field="*{surname}"/> </p>
+            <div th:if="${#fields.hasErrors('surname')}">
+                <p th:each="err : ${#fields.errors('surname')}"
+                   th:text="${err}" th:class="error">Username error
+                </p>
+            </div>
+            <p><input type="file"
+                      accept="image/jpeg,image/png" th:field="*{photo}"/></p>
+            <div th:if="${#fields.hasErrors('photo')}">
+            <p th:each="err : ${#fields.errors('photo')}"
+               th:text="${err}" th:class="error">Username error
+            </p>
+             </div>
+            <p><input type = "date" placeholder="Дата рождения" class="text"  th:field="*{birthday}"/></p>
+            <div th:if="${#fields.hasErrors('birthday')}">
+                <p th:each="err : ${#fields.errors('birthday')}"
+                   th:text="${err}" th:class="error">Username error
+                </p>
+            </div>
+            <p th:text="${photo_error}"></p>
+            <p>Выберите страну : <select th:field="*{motherland}" >
+
+            <th:block th:each="country:${countries}">
+                <th:block th:if="${author.motherland != null}">
+                    <th:block th:if="${(author.motherland.id == null) and (country.id == 1)}">
+                        <option selected th:value="${country.id}" th:text="${country.name}"></option>
+                    </th:block>
+
+                    <th:block th:if="${country.id == author.motherland.id}">
+                        <option selected th:value="${author.motherland.id}" th:text="${country.name}"></option>
+                    </th:block>
+
+                </th:block>
+
+                <th:block th:unless="${author.motherland != null}">
+                    <option th:value="${country.id}" th:text="${country.name}"></option>
+                </th:block>
+
+            </th:block>
+            </select></p>
+            <div th:if="${#fields.hasErrors('motherland')}">
+                <p th:each="err : ${#fields.errors('motherland')}"
+                   th:text="${err}" th:class="error">Username error
+                </p>
+            </div>
+            <p><textarea id="description" rows="1" cols="1" name="actor_description"
+            placeholder="Описание фильма" maxlength="1000"
+             th:field="*{description}"
+            th:text="${author.description}">
+            </textarea></p>
+            <div th:if="${#fields.hasErrors('description')}">
+                <p th:each="err : ${#fields.errors('description')}"
+                   th:text="${err}" th:class="error">Username error
+                </p>
+            </div>
+            <input type="submit" value="Сохранить" class="button"/>
+        </form>
+
+    </div>
+
+</div>
+
+</th:block>
+
+
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+    <th:block th:fragment="form_btn(actionPath,btnValue)">
+        <form th:action="${actionPath}">
+            <input type="submit" th:value="${btnValue}" class="button"/>
+        </form>
+    </th:block>
+
+    <th:block th:fragment="form_btn_obj(actionPath,btnValue,object)">
+        <form th:action="${actionPath}" th:object="${object}">
+            <input type="submit" th:value="${btnValue}" class="button"/>
+        </form>
+    </th:block>
+
+    <th:block th:fragment="form_btn_meth(controller,method,btnValue)">
+        <form th:action="${(#mvc.url(controller + method)).build()}">
+            <input type="submit" th:value="${btnValue}" class="button"/>
+        </form>
+    </th:block>
+
+
+</html>

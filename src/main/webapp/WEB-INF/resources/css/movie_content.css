@@ -1,0 +1,292 @@
+html{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: inherit;
+    /*min-width: 1030px;*/
+    margin: 0;
+    padding: 0;
+    /*background-image: url(../images/indexFon.jpg);
+    background-repeat: repeat-y ;
+    background-position: right top;
+    background-size : auto ;*/
+    background: rgba(240, 248, 255, 0.21);
+}
+
+
+#allForms{
+    text-align: left;
+    background: #fff;
+    width: 70%;
+    min-width: 730px;
+    /*height: inherit;*/
+    min-height : 450px;
+    margin :0 auto 5px auto;
+    padding: 0;
+    padding-bottom: 10px;
+    box-shadow: 0 20px 40px rgba(0,0,0,.4);
+}
+
+#general_inf{
+    min-height: 400px;
+    height: 320px;
+    padding: 20px;
+    /*margin-left: 10%;
+    margin-right: 10%;*/
+    box-sizing: border-box;
+    font-family: "Helvetica Neue",sans-serif;
+    /*background: lightgoldenrodyellow;*/
+}
+
+#div_photo{
+    box-sizing: border-box;
+    padding: 5px;
+    padding-right: 0;
+    padding-left: 0;
+    margin-top: 2%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    float:left;
+    width: 40%;
+    min-width: 280px;
+    height: 100%;
+    min-height: inherit;
+    display: inline-block;
+}
+
+img{
+    display: block;
+    /*margin: 0 auto;*/
+    /*height: 90%;*/
+   /* width: 100%;
+    max-height: 95%;*/
+    /*min-height: 300px;
+    min-width: 250px;*/
+    max-height: 100%;
+    min-height:90%;
+    min-width: 80%;
+    border: 1px solid black;
+}
+
+#div_short_inf{
+    float: left;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 15px;
+    width: 38%;
+    min-width: 250px;
+    padding: 5px;
+    padding-top: 16px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.clear_wrapper{
+    padding: 1px 0;
+    clear: left;
+}
+
+.clear_wrapper .clear{
+    margin: 0;
+    height: 1px;
+    background: #000000;
+}
+
+#div_main{
+    padding: 20px 0;
+   /* margin-left: 10%;
+    margin-right: 10%;*/
+    box-sizing: border-box;
+    /*height: 300px;*/
+}
+
+#div_description{
+    box-sizing: border-box;
+    padding: 5px;
+    padding-bottom: 0;
+    /*padding-bottom: 16px;*/
+    text-align: left;
+    font-size: 16px;
+    font-family: Tahoma,sans-serif;
+
+}
+
+#title_description{
+    font-weight: bold;
+}
+
+.div_mark{
+    width: 30%;
+    min-width: 130px;
+    margin-left: 70%;
+    box-sizing: border-box;
+    padding-bottom: 10px;
+    padding-right: 0;
+    text-align: center;
+}
+
+.div_mark_wrapper{
+    display: inline-block;
+    height: 44px;
+    width: 130px;
+}
+
+select {
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0 !important;
+    background: #c50000;
+    background-image: none;
+}
+
+.select {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    line-height: 2;
+    background: #ffdc7c;
+    overflow: hidden;
+    border-radius: 2px;
+}
+select {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0 3px 0 2px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.select::after {
+    content: '\2605';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0 5px;
+    background: #ffdc7c;
+    pointer-events: none;
+}
+
+.select:hover::after {
+    color: #c50000;
+}
+.select::after {
+    transition: .25s all ease;
+}
+
+.select_wrap{
+    display: inline-block;
+    float: left;
+    position: relative;
+    width: 50px;
+    height: 30px;
+    padding-top: 13px;
+}
+.btn_wrap{
+    display: inline-block;
+    height: 44px;
+}
+
+.mark_btn{
+    margin-top: 14px;
+    height: 30px;
+    /*background: #ffdc7c;*/
+}
+
+#mark_span{
+    width: 130px;
+    font-size: 17px;
+    font-family: fantasy, sans-serif;
+}
+
+span{
+    padding: 5px;
+
+}
+
+p{
+    margin: 10px;
+}
+
+.reviews{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.review{
+    /*background: beige;*/
+    padding: 5px;
+}
+
+.review_title{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.review_title{
+    font-size: 15px;
+}
+
+#my_review{
+    box-sizing: border-box;
+    /*background: #FFEBCD;*/
+    height: auto;
+    padding: 10px;
+}
+
+#form_new_review{
+    padding: 10px;
+    padding-left: 15px;
+}
+
+#my_title{
+    padding: 10px;
+/*    width: 60%;
+    min-width: 300px;
+    margin-bottom: 10px;*/
+}
+
+#my_content{
+    padding: 4px 3px;
+    /*margin: 10px;*/
+    /*float: left;*/
+    font-size: 15px;
+    font-family: Tahoma,sans-serif;
+    height: 350px;
+    min-height: 100px;
+    /*width: 90%;*/
+    min-width: 400px;
+    /*resize: none;*/
+    outline: none;
+    /*margin-bottom: 10px;*/
+    overflow: auto;
+}
+
+.button {
+    padding: 5px;
+    white-space: normal;
+    /*float: left;*/
+    color: black;
+    cursor: pointer;
+    background: #ffe96f;
+    border: 1px solid black;
+    border-radius: 2px;
+}
+
+#mainColor{
+    background: #FFFAF0;
+    margin-left: 10%;
+    margin-right: 10%;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.55);
+}
+
+
+
+
+

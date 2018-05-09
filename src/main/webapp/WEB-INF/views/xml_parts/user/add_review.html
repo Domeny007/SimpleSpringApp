@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<div id="reviews_data">
+
+    <th:block th:each="review,iterStat:${reviews}">
+
+        <div class = "review">
+            <p class="review_title" th:text="${review.writer.usernameReal}"></p>
+            <p class="review_title" th:text="${review.title}"></p>
+            <p class="review_content" th:text="${review.content}"></p>
+        </div>
+
+        <th:block th:if="${not iterStat.last}">
+            <div class="clear_wrapper">
+                <div class="clear"></div>
+            </div>
+        </th:block>
+
+    </th:block>
+
+    <th:block th:if="${review_not_added_error != null}">
+        <div class="clear_wrapper">
+            <div class="clear"></div>
+        </div>
+
+        <div>
+            <p th:text="${review_not_added_error}" th:class="error"></p>
+        </div>
+    </th:block>
+
+</div>

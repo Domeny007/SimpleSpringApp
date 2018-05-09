@@ -1,0 +1,86 @@
+body{
+    background-image: url(../images/cookie_table.jpg);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: cover;
+}
+
+#review_out_div{
+    text-align: left;
+    background: #fff;
+    width: 40%;
+    min-height : 450px;
+    min-width: 500px;
+    margin :auto;
+    margin-top: 150px;
+    padding: 10px;
+    box-shadow: 0 20px 40px rgba(0,0,0,.4);
+}
+
+#review_in_div{
+    margin :auto;
+    width: 80%;
+}
+
+textarea{
+    overflow: auto;
+    resize: none;
+    outline: none;
+    border-color: black;
+    width: 100%;
+    padding: 20px;
+    line-height: 1.5;
+    color: #000;
+}
+
+textarea:focus{
+    background: lightyellow;
+
+}
+
+textarea:disabled{
+    background: rgba(255, 220, 124, 0.75);
+}
+
+.button{
+    padding: 5px;
+    background: #ffe96f;
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.button:hover{
+    background: #fdd400;
+}
+
+form{
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+input.text{
+    width:50%;
+    min-width: 70px;
+    margin-left: 22%;
+    margin-right: 22%;
+    text-align: center;
+    border: 2px solid black;
+    padding: 8px;
+
+}
+
+input.text:focus{
+    background: lightyellow;
+    border-color: black;
+    outline: none;
+}
+
+#review_title{
+    font-size: 1.5em;
+    text-align: center;
+    padding:10px;
+    margin-left: 22%;
+    margin-right: 22%;
+    font-weight: bold;
+}

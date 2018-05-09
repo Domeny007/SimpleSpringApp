@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<div id="data">
+
+    <th:block th:each="author:${authors}">
+        <div id = "general_inf">
+
+            <div id = "div_photo">
+                <img th:src="${author.photo}" th:alt="${author.name}"/>
+            </div>
+
+            <div id = "div_short_inf">
+
+                <table>
+
+                    <tr>
+                        <td>
+                            <span th:text="'Имя актера : ' + ${author.name} + ' ' + ${author.surname}"></span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <span th:text="'День рождения : ' +  ${#dates.format(author.birthday, 'dd.MM.yyyy')}"></span>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            <span th:text="'Страна рождения : ' + ${author.motherland.name}"></span>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            <span th:text="'Оценка актера : ' + ${author.mark}"></span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            Добавить : <input type = "checkbox"
+                                              th:name = "${author.name} + ' ' +  ${author.surname}"
+                            th:value = "${author.id}"
+                            class = "checkbox_add"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            Удалить : <input type = "checkbox"
+                                             th:name = "${author.name} + ' ' +  ${author.surname}"
+                                             th:value = "${author.id}"
+                                            class = "checkbox_del"/>
+                        </td>
+                    </tr>
+
+                </table>
+
+            </div>
+        </div>
+
+        <div class="clear_wrapper">
+            <div class="clear"></div>
+        </div>
+    </th:block>
+
+</div>

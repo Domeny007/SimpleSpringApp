@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="head :: frag(title='Registration',links = 'css/registration.css',scripts='js/common/form_reset.js')"> </head>
+
+<body>
+
+    <th:block>
+
+
+    <div id = "registration_div">
+
+        <div id = "registration_form">
+
+            <form th:action = "${(#mvc.url('SC#registrationPost')).build()}" method="POST" th:object="${registrationForm}">
+
+                <p>
+                    <input type="text" th:field="*{username}" autocomplete="of"
+                           th:class="text" th:placeholder="#{label.email}"/>
+                </p>
+                <div th:if="${#fields.hasErrors('username')}">
+                    <p th:each="err : ${#fields.errors('username')}"
+                       th:text="${err}" th:class="error">Username error
+                    </p>
+                </div>
+
+                <p>
+                    <input type="text" th:field="*{usernameReal}" autocomplete="of"
+                           th:class="text" th:placeholder="#{label.usernameReal}"/>
+                </p>
+                <div th:if="${#fields.hasErrors('usernameReal')}">
+                    <p th:each="err : ${#fields.errors('usernameReal')}"
+                       th:text="${err}" th:class="error">Email error
+                    </p>
+                </div>
+
+                <p>
+                    <input type="password" th:field="*{password}" autocomplete="of"
+                           th:class="text" th:placeholder="#{label.password}"/>
+                </p>
+                <div th:if="${#fields.hasErrors('password')}">
+                    <p th:each="err : ${#fields.errors('password')}"
+                       th:text="${err}" th:class="error">Email error
+                    </p>
+                </div>
+
+                <p>
+                    <input type="password" th:field="*{passwordRepeat}" autocomplete="of"
+                           th:class="text" th:placeholder="#{label.confirm_password}"/>
+                </p>
+                <div th:if="${#fields.hasErrors('passwordRepeat')}">
+                    <p th:each="err : ${#fields.errors('passwordRepeat')}"
+                       th:text="${err}" th:class="error">Email error
+                    </p>
+                </div>
+
+                <div th:if="${#fields.hasErrors('global')}">
+                    <p th:each="err : ${#fields.errors('global')}" th:text="${err}" th:class="error">Input is incorrect</p>
+                </div>
+
+                <div th:replace="user_dop_data :: dop_data(countries = ${countries})"></div>
+
+                <input type="submit" value="Register" class="button"/>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    </th:block>
+
+</body>
+
+</html>

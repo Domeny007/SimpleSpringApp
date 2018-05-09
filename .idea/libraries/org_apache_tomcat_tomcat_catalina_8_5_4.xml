@@ -1,0 +1,20 @@
+<component name="libraryTable">
+  <library name="org.apache.tomcat:tomcat-catalina:8.5.4" type="repository">
+    <properties maven-id="org.apache.tomcat:tomcat-catalina:8.5.4" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/tomcat-catalina/8.5.4/tomcat-catalina-8.5.4.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/tomcat-servlet-api/8.5.4/tomcat-servlet-api-8.5.4.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/tomcat-jsp-api/8.5.4/tomcat-jsp-api-8.5.4.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/tomcat-el-api/8.5.4/tomcat-el-api-8.5.4.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/tomcat-juli/8.5.4/tomcat-juli-8.5.4.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/tomcat-annotations-api/8.5.4/tomcat-annotations-api-8.5.4.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/tomcat-api/8.5.4/tomcat-api-8.5.4.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/tomcat-jni/8.5.4/tomcat-jni-8.5.4.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/tomcat-coyote/8.5.4/tomcat-coyote-8.5.4.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/tomcat-util/8.5.4/tomcat-util-8.5.4.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/tomcat-util-scan/8.5.4/tomcat-util-scan-8.5.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

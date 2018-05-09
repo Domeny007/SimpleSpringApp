@@ -1,0 +1,73 @@
+body{
+    background-image: url(../images/indexFon.jpg);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: cover;
+
+}
+
+#authentication{
+    margin: auto;
+    margin-bottom: 5%;
+    padding: 30px;
+}
+
+#allForms{
+    text-align: left;
+    background: #fff;
+    width: 70%;
+    min-height : 450px;
+    min-width: 300px;
+    margin :auto;
+    margin-top: 46px;
+    padding: 10px;
+    box-shadow: 0 20px 40px rgba(0,0,0,.4);
+}
+
+#authentication_error{
+    text-align : center ;
+    color : #c50000;
+    border : 2px dotted Tomato;
+    background : rgba(255,233,111,0.24);
+    margin : auto;
+    margin-top: 20px;
+    padding : 20px;
+}
+
+
+.button{
+    padding: 5px;
+    background: #ffe96f;
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 2px;
+}
+
+.button:hover{
+    background: #fdd400;
+}
+
+input.text{
+    width:70%;
+    min-width: 70px;
+    border: 2px solid grey;
+    padding: 5px;
+
+}
+
+input.text:focus{
+    background: lightyellow;
+    border-color: black;
+    outline: none;
+}
+
+select{
+    margin-left: 5px;
+    padding: 3px;
+    text-align: center;
+}
+
+
+
+
+

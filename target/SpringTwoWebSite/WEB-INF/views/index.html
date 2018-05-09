@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+    <head th:replace="head :: frag(title='Auth',
+                            links = 'css/start_page.css',
+                            scripts=${new String[]{'/js/jquery-3.2.1.js','js/common/form_reset.js','js/common/change_lang.js'}})">
+    </head>
+
+    <body>
+    <div id = "allForms">
+
+        <div class="lang">
+            <button class="langbtn" th:text="#{lang.ru}">Dropdown</button>
+            <div class="lang-content">
+                <a th:href="'?lang=' + #{lang.ru}" th:text="#{lang.ru}"></a>
+                <a th:href="'?lang=' + #{lang.en}" th:text="#{lang.en}"></a>
+            </div>
+        </div>
+
+        <div id = "authentication">
+
+            <!--<form th:action = "${(#mvc.url('SC#loginPost')).build()}" th:object="${loginForm}" method="post" id = "form" th:accept-charset="utf-8">-->
+            <form th:action = "@{/login}" th:object="${loginForm}" method="post" id = "form" th:accept-charset="utf-8">
+
+
+                <p>
+                    <input type="text" th:field="*{username}"
+                       th:class="text" th:placeholder="#{label.email}"/>
+                </p>
+                <div th:if="${#fields.hasErrors('username')}">
+                    <p th:each="err : ${#fields.errors('username')}"
+                        th:text="${err}">Email error
+                    </p>
+                </div>
+
+
+                <p>
+                <input type="password" th:field="*{password}"
+                       th:class="text" th:placeholder="#{label.password}"/></p>
+                <div th:if="${#fields.hasErrors('password')}">
+                    <p th:each="err : ${#fields.errors('password')}"
+                       th:text="${err}">Password error
+                    </p>
+                </div>
+
+                <input id="remember_me" name="remember-me" type="checkbox"/>
+                <label for="remember_me" class="inline">Remember me</label>
+
+                <p><input type="submit" th:value="#{label.sign_in}" th:class="button"/></p>
+
+            </form>
+
+            <p><div id="registration"
+                 th:include="form_btn :: form_btn_meth(controller='SC#',method='registration',btnValue=#{label.sign_up})" >
+            </div></p>
+
+            <!--<p th:if="${logErr == true}" th:text="#{error.login}"></p>-->
+
+            <p th:text="${error}"></p>
+
+            <p th:text="${msg}"></p>
+
+            <p th:text="${update_message}"></p>
+
+            <p th:if="${item_not_found_error != null}" th:text="${item_not_found_error}"></p>
+
+        </div>
+
+    </div>
+
+    <th:block th:replace="bottom :: bottom"></th:block>
+
+    </body>
+
+</html>

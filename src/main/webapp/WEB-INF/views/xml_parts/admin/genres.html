@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<div id="data">
+
+    <th:block th:each="genre:${genres}">
+
+        <div id = "general_inf" style = "height:50px">
+
+            <div id = "div_short_inf" style = "padding:0">
+
+                <table>
+
+                    <tr>
+                        <td>
+                            <span th:text="'Название жанра :' + ${genre.name}"></span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            Добавить : <input type = "checkbox"
+                                              th:name = "${genre.name}"
+                                              th:value = "${genre.id}"
+                                              class = "checkbox_add"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            Удалить : <input type = "checkbox"
+                                             th:name = "${genre.name}"
+                                             th:value = "${genre.id}"
+                                             class = "checkbox_del"/>
+                        </td>
+                    </tr>
+
+                </table>
+
+            </div>
+        </div>
+
+        <div class="clear_wrapper">
+            <div class="clear"></div>
+        </div>
+    </th:block>
+
+</div>
