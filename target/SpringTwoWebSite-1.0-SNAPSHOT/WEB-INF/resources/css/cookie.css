@@ -1,0 +1,80 @@
+
+body{
+    background-image: url(../images/cookie_table.jpg);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: cover;
+}
+
+#cookie_div{
+    text-align: left;
+    background: #fff;
+    width: 40%;
+    min-height : 450px;
+    min-width: 500px;
+    margin :auto;
+    margin-top: 150px;
+    padding: 10px;
+    box-shadow: 0 20px 40px rgba(0,0,0,.4);
+}
+
+h2{
+    text-align: center;
+    color: rgba(197, 0, 0, 0.76);
+}
+
+table {
+    border-collapse: collapse; /* Убираем двойные линии между ячейками */
+    width: 80%; /* Ширина таблицы */
+    min-width: 450px;
+    padding: 10px;
+    margin: auto;
+    table-layout: fixed;
+}
+th {
+    background: #fc0; /* Цвет фона ячейки */
+    cursor: pointer;
+}
+th:hover {
+    background: #8bd4ff;
+}
+
+th, td {
+    border: 1px solid black; /* Параметры рамки */
+    padding: 4px; /* Поля вокруг текста */
+    margin: 4px;
+    text-align: center; /* Выравнивание по центру */
+
+}
+
+tbody tr:nth-child(2n){
+    background: #F0F8FF;
+}
+
+tbody tr td:nth-child(5n){
+    width: 0;
+}
+
+.form{
+    margin: 0;
+}
+
+#review_form{
+    display: inline-block;
+}
+
+.button {
+    width:100%;
+    white-space: normal;
+    margin: auto;
+    border: none;
+    color: black;
+    cursor: pointer;
+    background: inherit;
+}
+
+
+
+
+
+

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="head :: frag(
+                    title='searchMovies',
+                    links = ${new String[]{'css/menu.css','css/movie_list.css'}},
+                    scripts=${new String[]{'js/common/common_people_functions.js',
+                    'js/search/menu_search.js','js/common/change_lang.js',
+                    'js/search/search_books.js'}})">
+</head>
+
+<body>
+
+<div th:replace="main/menu_main :: menu"></div>
+
+<div id = "allForms">
+
+    <input type="hidden" id = "numPage" th:value="${numPage}"/>
+
+    <div id = "back" >
+        <div class="arrow_div">
+            <img class="arrow" th:src="@{images/list_page/back.png}"/>
+        </div>
+    </div>
+
+    <div id="searchDiv">
+        <form id="searchForm">
+            <input type="hidden" id = "searchType" name="searchType" value="user"/>
+            <input type="text" id="searchInput" placeholder="Search movie...">
+        </form>
+    </div>
+
+    <div id = "dataDiv">
+
+        <th:block th:if="${size == 0}">
+            <input id = "isLast" type="hidden" value="last"/>
+        </th:block>
+
+        <h2 class = "h2_title">Самые популярные книги</h2>
+
+        <ul class="list">
+            <th:block th:each="book:${books}">
+                <li class = "li_item">
+                    <div class = "list_item">
+                        <div class = "div_photo">
+                            <a th:href="${(#mvc.url('BC#showBook')).arg(0,book.id).build()}">
+                                <img class = "image img-fluid" th:src="@{${book.photo}}" th:alt = "${book.name}"/>
+                            </a>
+                        </div>
+
+                        <div class="div_content">
+                            <div class = "content">
+                                <p>Название фильма :</p>
+                                <a th:href="${(#mvc.url('BC#showBook')).arg(0,book.id).build()}">
+                                    <span class="span_name" th:text="${book.name}"></span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class = "div_mark">
+                            <p>Оценка :</p>
+                            <span class="span_mark" th:text="${book.mark}"></span>
+                        </div>
+                        <div class="clear_wrapper">
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </li>
+            </th:block>
+        </ul>
+
+    </div>
+
+
+    <div id = "forward" >
+        <div class="arrow_div">
+            <img class="arrow" th:src="@{images/list_page/forward.png}"/>
+        </div>
+    </div>
+
+    <th:block th:replace="bottom :: bottom"></th:block>
+
+</div>
+
+</body>
+
+</html>

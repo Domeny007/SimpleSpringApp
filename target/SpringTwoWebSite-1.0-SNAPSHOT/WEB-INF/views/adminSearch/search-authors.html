@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head th:replace="head :: frag(
+                    title='searchActors',
+                    links = ${new String[]{'css/menu.css','css/search.css'}},
+                    scripts=${new String[]{'js/search/search_actors.js',
+                    'js/common/common_movie_functions.js','js/search/menu_search.js',
+                    'js/common/change_lang.js'}})">
+</head>
+
+<body>
+
+<th:block sec:authorize="hasRole('ADMIN')">
+
+<div th:replace="main/menu_main :: menu"></div>
+
+<div id="allForms">
+
+    <h2>Найдите нужного актера и добавьте его</h2>
+
+    <form name="actorsForm">
+        <input type="hidden" id = "searchType" name="searchType" value="movie"/>
+        <input type="hidden" id = "numPage" name="numPage" value="0"/>
+        <input type="text" id="searchInput" placeholder="Search actor...">
+    </form>
+
+    <div id = "some">
+
+        <div id = "forms">
+
+            <button id="add" value="" class="button">Добавить</button>
+
+            <button id="delete" value="" class="button">Удалить</button>
+
+            <form class="searchBtn" id = "searchForm" method="post" th:action="${(#mvc.url('ABC#bindAuthorsPost')).build()}">
+            <input type="hidden" id = "idList" name="authorsId" value="">
+            <input type="hidden" id = "namesList" name="authorsNames" value="">
+            <input type="submit" id="saveAll" value="Сохранить/Вернуться" class="button" style="margin-left: 0;">
+            </form>
+
+            <p id = "added">Добавленные :
+                <span id="addList"></span>
+            </p>
+
+        </div>
+
+    </div>
+
+    <div id = "dataDiv">
+    </div>
+
+</div>
+
+    <th:block th:replace="bottom :: bottom"></th:block>
+
+</th:block>
+
+</body>
+
+</html>

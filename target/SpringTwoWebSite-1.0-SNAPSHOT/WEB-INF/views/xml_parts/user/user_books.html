@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<div id="data">
+
+        <th:block th:if="${size == 0}">
+            <input th:id = "isLast" type="hidden" value="last"/>
+            <h2 class = "h2_title">Ничего не найдено</h2>
+        </th:block>
+
+        <th:block th:unless="${size == 0}">
+            <input th:id = "isLast" type="hidden" value="not_last"/>
+            <h2 class = "h2_title" th:text="${title}"></h2>
+
+            <ul class="list">
+                <th:block th:each="book:${books}">
+                    <li class = "li_item">
+                        <div class = "list_item">
+                            <div class = "div_photo">
+                                <a th:href="@{'/book/' + ${book.id}}">
+                                    <img class = "image" th:src="@{${book.photo}}"
+                                         th:alt = "${book.name}"/>
+                                </a>
+                            </div>
+
+                            <div class="div_content">
+                                <div class = "content">
+                                    <p>Название фильма :</p>
+                                    <a th:href="@{'/book/' + ${book.id}}">
+                                        <span class="span_name" th:text="${book.name}"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class = "div_mark">
+                                <p>Оценка :</p>
+                                <span class="span_mark" th:text="${book.mark}"></span>
+                            </div>
+                            <div class="clear_wrapper">
+                                <div class="clear"></div>
+                                <input type = "hidden" id = "size" th:value = "${size}"/>
+                            </div>
+                        </div>
+                    </li>
+                </th:block>
+            </ul>
+    </th:block>
+</div>

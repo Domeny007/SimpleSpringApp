@@ -1,0 +1,170 @@
+2018-05-25 09:23:48 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-05-25 09:23:48 INFO  Version:37 - HHH000412: Hibernate Core {5.1.0.Final}
+2018-05-25 09:23:48 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-05-25 09:23:48 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2018-05-25 09:23:48 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-05-25 09:23:48 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2018-05-25 09:23:48 INFO  LobCreatorBuilderImpl:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-05-25 09:23:48 INFO  BasicTypeRegistry:138 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@5bc4b297
+2018-05-25 09:23:49 INFO  Version:30 - HV000001: Hibernate Validator 5.4.1.Final
+2018-05-25 09:23:50 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-05-25 09:27:21 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-05-25 09:27:21 INFO  Version:37 - HHH000412: Hibernate Core {5.1.0.Final}
+2018-05-25 09:27:21 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-05-25 09:27:21 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2018-05-25 09:27:21 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-05-25 09:27:21 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2018-05-25 09:27:21 INFO  LobCreatorBuilderImpl:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-05-25 09:27:21 INFO  BasicTypeRegistry:138 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@13765ebf
+2018-05-25 09:27:22 INFO  Version:30 - HV000001: Hibernate Validator 5.4.1.Final
+2018-05-25 09:27:25 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-05-25 09:31:15 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-05-25 09:31:15 INFO  Version:37 - HHH000412: Hibernate Core {5.1.0.Final}
+2018-05-25 09:31:15 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-05-25 09:31:15 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2018-05-25 09:31:15 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-05-25 09:31:15 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2018-05-25 09:31:16 INFO  LobCreatorBuilderImpl:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-05-25 09:31:16 INFO  BasicTypeRegistry:138 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@7e8ee459
+2018-05-25 09:31:16 INFO  Version:30 - HV000001: Hibernate Validator 5.4.1.Final
+2018-05-25 09:31:19 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-05-25 09:31:43 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-05-25 09:31:43 INFO  Version:37 - HHH000412: Hibernate Core {5.1.0.Final}
+2018-05-25 09:31:43 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-05-25 09:31:43 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2018-05-25 09:31:43 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-05-25 09:31:43 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2018-05-25 09:31:43 INFO  LobCreatorBuilderImpl:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-05-25 09:31:43 INFO  BasicTypeRegistry:138 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@db14a14
+2018-05-25 09:31:44 INFO  Version:30 - HV000001: Hibernate Validator 5.4.1.Final
+2018-05-25 09:31:45 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-05-25 09:35:07 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-05-25 09:35:07 INFO  Version:37 - HHH000412: Hibernate Core {5.1.0.Final}
+2018-05-25 09:35:07 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-05-25 09:35:07 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2018-05-25 09:35:07 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-05-25 09:35:07 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2018-05-25 09:35:07 INFO  LobCreatorBuilderImpl:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-05-25 09:35:07 INFO  BasicTypeRegistry:138 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@7961f7eb
+2018-05-25 09:35:08 INFO  Version:30 - HV000001: Hibernate Validator 5.4.1.Final
+2018-05-25 09:35:09 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-05-25 09:40:02 INFO  RootConfig:131 - access denied
+2018-05-25 09:40:02 INFO  RootConfig:131 - access denied
+2018-05-25 09:42:42 INFO  RootConfig:131 - access denied
+2018-05-25 09:49:51 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-05-25 09:49:51 INFO  Version:37 - HHH000412: Hibernate Core {5.1.0.Final}
+2018-05-25 09:49:51 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-05-25 09:49:51 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2018-05-25 09:49:51 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-05-25 09:49:51 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2018-05-25 09:49:51 INFO  LobCreatorBuilderImpl:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-05-25 09:49:51 INFO  BasicTypeRegistry:138 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@29081bcf
+2018-05-25 09:49:52 INFO  Version:30 - HV000001: Hibernate Validator 5.4.1.Final
+2018-05-25 09:49:53 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-05-25 10:12:21 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-05-25 10:12:21 INFO  Version:37 - HHH000412: Hibernate Core {5.1.0.Final}
+2018-05-25 10:12:21 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-05-25 10:12:21 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2018-05-25 10:12:21 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-05-25 10:12:21 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2018-05-25 10:12:21 INFO  LobCreatorBuilderImpl:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-05-25 10:12:22 INFO  BasicTypeRegistry:138 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@657138b9
+2018-05-25 10:12:22 INFO  Version:30 - HV000001: Hibernate Validator 5.4.1.Final
+2018-05-25 10:12:23 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-05-25 10:16:11 INFO  RootConfig:131 - access denied
+2018-05-25 10:22:50 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-05-25 10:22:50 INFO  Version:37 - HHH000412: Hibernate Core {5.1.0.Final}
+2018-05-25 10:22:50 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-05-25 10:22:50 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2018-05-25 10:22:50 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-05-25 10:22:50 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2018-05-25 10:22:51 INFO  LobCreatorBuilderImpl:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-05-25 10:22:51 INFO  BasicTypeRegistry:138 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@71eb740b
+2018-05-25 10:22:51 INFO  Version:30 - HV000001: Hibernate Validator 5.4.1.Final
+2018-05-25 10:22:52 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-05-25 10:25:19 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-05-25 10:25:19 INFO  Version:37 - HHH000412: Hibernate Core {5.1.0.Final}
+2018-05-25 10:25:19 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-05-25 10:25:19 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2018-05-25 10:25:19 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-05-25 10:25:19 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2018-05-25 10:25:19 INFO  LobCreatorBuilderImpl:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-05-25 10:25:19 INFO  BasicTypeRegistry:138 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@1c118778
+2018-05-25 10:25:20 INFO  Version:30 - HV000001: Hibernate Validator 5.4.1.Final
+2018-05-25 10:25:22 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-05-25 10:26:33 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-05-25 10:26:33 INFO  Version:37 - HHH000412: Hibernate Core {5.1.0.Final}
+2018-05-25 10:26:33 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-05-25 10:26:33 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2018-05-25 10:26:33 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-05-25 10:26:34 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2018-05-25 10:26:34 INFO  LobCreatorBuilderImpl:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-05-25 10:26:34 INFO  BasicTypeRegistry:138 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@50139480
+2018-05-25 10:26:34 INFO  Version:30 - HV000001: Hibernate Validator 5.4.1.Final
+2018-05-25 10:26:36 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-05-25 10:28:53 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-05-25 10:28:53 INFO  Version:37 - HHH000412: Hibernate Core {5.1.0.Final}
+2018-05-25 10:28:53 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-05-25 10:28:53 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2018-05-25 10:28:53 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-05-25 10:28:54 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2018-05-25 10:28:54 INFO  LobCreatorBuilderImpl:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-05-25 10:28:54 INFO  BasicTypeRegistry:138 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@29081bcf
+2018-05-25 10:29:05 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-05-25 10:29:05 INFO  Version:37 - HHH000412: Hibernate Core {5.1.0.Final}
+2018-05-25 10:29:05 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-05-25 10:29:05 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2018-05-25 10:29:05 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-05-25 10:29:05 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2018-05-25 10:29:05 INFO  LobCreatorBuilderImpl:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-05-25 10:29:05 INFO  BasicTypeRegistry:138 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@35b0c3cf
+2018-05-25 10:29:05 INFO  Version:30 - HV000001: Hibernate Validator 5.4.1.Final
+2018-05-25 10:29:07 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-05-25 11:37:48 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-05-25 11:37:48 INFO  Version:37 - HHH000412: Hibernate Core {5.1.0.Final}
+2018-05-25 11:37:48 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-05-25 11:37:48 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2018-05-25 11:37:48 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-05-25 11:37:49 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2018-05-25 11:37:49 INFO  LobCreatorBuilderImpl:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-05-25 11:37:49 INFO  BasicTypeRegistry:138 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@25371cb4
+2018-05-25 11:37:49 INFO  Version:30 - HV000001: Hibernate Validator 5.4.1.Final
+2018-05-25 11:37:50 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-05-25 11:40:28 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-05-25 11:40:28 INFO  Version:37 - HHH000412: Hibernate Core {5.1.0.Final}
+2018-05-25 11:40:28 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2018-05-25 11:40:28 INFO  Environment:317 - HHH000021: Bytecode provider name : javassist
+2018-05-25 11:40:28 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-05-25 11:40:28 INFO  Dialect:156 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2018-05-25 11:40:28 INFO  LobCreatorBuilderImpl:124 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-05-25 11:40:28 INFO  BasicTypeRegistry:138 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@5b129d46
+2018-05-25 11:40:29 INFO  Version:30 - HV000001: Hibernate Validator 5.4.1.Final
+2018-05-25 11:40:30 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory

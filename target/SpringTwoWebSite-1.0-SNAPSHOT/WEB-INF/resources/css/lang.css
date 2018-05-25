@@ -1,0 +1,48 @@
+.langbtn {
+    background-color: #000000;
+    color: white;
+    padding: 0px;
+    font-size: 12px;
+    min-width: inherit;
+    min-height: inherit;
+    border: none;
+    cursor: pointer;
+}
+
+.lang {
+    position: relative;
+    display: inline-block;
+    float: right;
+    min-width: 30px;
+    min-height: 30px;
+}
+
+.lang-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: inherit;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.lang-content a {
+    color: black;
+    padding: 5px 5px;
+    text-decoration: none;
+    display: block;
+}
+
+.lang-content a:hover {background-color: #f1f1f1}
+
+.lang:hover .lang-content {
+    display: block;
+}
+
+.lang:hover .langbtn {
+    background-color: #e10000;
+}
+
+.lang-content a:hover{
+    text-decoration: none;
+}

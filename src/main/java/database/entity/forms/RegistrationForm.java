@@ -16,15 +16,15 @@ public class RegistrationForm {
     @EmailConstraint
     private String username;
 
-    @NotBlank(message = "{error.not_empty}")
+    //@NotBlank(message = "{error.not_empty}")
     @Size(min = 5,max = 100,message = "{error.length}")
     private String password;
 
-    @NotBlank(message = "{error.not_empty}")
+   // @NotBlank(message = "{error.not_empty}")
     @Size(min = 5,max = 100,message = "{error.length}")
     private String passwordRepeat;
 
-    @NotBlank(message = "{error.not_empty}")
+   // @NotBlank(message = "{error.not_empty}")
     @Size(min = 5,max = 100,message = "{error.length}")
     private String usernameReal;
 
